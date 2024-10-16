@@ -1,13 +1,42 @@
-# HLS_QS
-Embedded application Vitis / Vivado , for runing the quicksort algorithm on a zybo 7000 board. 
+# HLS_QS Embedded Application Guide
+
+This guide details the steps for setting up and running a quicksort algorithm on a Zybo 7000 board using Vivado, Vitis, and PuTTY.
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Setting Up Vivado](#setting-up-vivado)
+   - [Creating a New Project](#creating-a-new-project)
+   - [Selecting the Zybo 7000 Board](#selecting-the-zybo-7000-board)
+   - [Creating the Block Design](#creating-the-block-design)
+   - [Configuring Block Automation](#configuring-block-automation)
+   - [Adding AXI GPIO](#adding-axi-gpio)
+   - [Validating the Design and Generating HDL Wrapper](#validating-the-design-and-generating-hdl-wrapper)
+   - [Generating the Bitstream](#generating-the-bitstream)
+3. [Exporting Hardware from Vivado](#exporting-hardware-from-vivado)
+4. [Setting Up Vitis](#setting-up-vitis)
+   - [Creating a New Workspace](#creating-a-new-workspace)
+   - [Setting Up the Platform Component](#setting-up-the-platform-component)
+   - [Building the Platform](#building-the-platform)
+5. [Developing the Application in Vitis](#developing-the-application-in-vitis)
+   - [Importing the Quicksort Algorithm](#importing-the-quicksort-algorithm)
+   - [Building the Application](#building-the-application)
+6. [Setting Up and Using PuTTY](#setting-up-and-using-putty)
+7. [Testing and Troubleshooting](#testing-and-troubleshooting)
+8. [Conclusion](#conclusion)
+
+## Introduction
+
+This guide walks you through the process of setting up an embedded application using Vivado, Vitis, and PuTTY for the Zybo 7000 board. The application implements a quicksort algorithm and is run using a serial connection via PuTTY.
 
 
 
 
 
-#Vivado 
-  Start a new project in vivado.
-  * ![Screenshot 2024-10-16 143136](https://github.com/user-attachments/assets/cbce6e96-e663-4c9e-aff1-c7ee4b90696f)
+## Setting Up Vivado
+
+### Creating a New Project
+1. Open Vivado and select **Create New Project**.
+![Screenshot 2024-10-16 143136](https://github.com/user-attachments/assets/cbce6e96-e663-4c9e-aff1-c7ee4b90696f)
 
   Select the correct board by: `vendor:` digilentinc , board `Zybo`. Or just search for Zybo.
   ![image](https://github.com/user-attachments/assets/88584c4b-6295-4a8e-bdb9-e46600c05e08)
