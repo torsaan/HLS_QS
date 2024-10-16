@@ -21,8 +21,6 @@ This guide details the steps for setting up and running a quicksort algorithm on
    - [Importing the Quicksort Algorithm](#importing-the-quicksort-algorithm)
    - [Building the Application](#building-the-application)
 6. [Setting Up and Using PuTTY](#setting-up-and-using-putty)
-7. [Testing and Troubleshooting](#testing-and-troubleshooting)
-8. [Conclusion](#conclusion)
 
 ## Introduction
 
