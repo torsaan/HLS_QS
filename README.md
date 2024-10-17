@@ -1,6 +1,7 @@
 ### T0d0: Wrapper fil kan ikke brukes til å bygge platformen(?)
-   * Litt usikker på om dette går an å bare flytte på. uten alle filer. 
+   * Litt usikker på om dette går an å bare flytte på. uten alle filer.
 
+![image](https://github.com/user-attachments/assets/f71968ac-323b-4a5f-8d3a-ca0102881d5a)
 # HLS_QS Embedded Application Guide
 
 This guide details the steps for setting up and running a quicksort algorithm on a Zybo 7000 board using Vivado, Vitis, and PuTTY.
