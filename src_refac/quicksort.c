@@ -2,13 +2,14 @@
 #include <string.h>
 
 // XOR swap function, to use less memory 
-static void swap(char *a, char *b) {
-    if (a != b) {  
-        *a ^= *b; //XOR #1
-        *b ^= *a; //XOR #2
-        *a ^= *b; //XOR #3 
-    }
-}
+//static void swap(char *a, char *b) {
+//    if (a != b) {  
+//        *a ^= *b; //XOR #1
+//        *b ^= *a; //XOR #2
+ //       *a ^= *b; //XOR #3 
+  //  }
+//}
+
 
 //Partition function for quicksort 
 static int partition(char *A, int low, int high) {
