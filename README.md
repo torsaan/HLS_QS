@@ -31,7 +31,12 @@ If you want a video instead you can look here [YouTube](https://www.youtube.com/
 
 This guide walks you through the process of setting up an embedded application using Vivado, Vitis, and PuTTY for the Zybo 7000 board. The application implements a quicksort algorithm and is run using a serial connection via PuTTY.
 
-
+## Prerequisites
+* Vitis 2023.X
+* Vivado 2023.X
+* Zybo Zynq-7000 development board
+* PuTTY
+* Svaj
 
 
 
