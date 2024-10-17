@@ -4,7 +4,8 @@
 #include "xil_printf.h"
 #include "quicksort.h"
 
-#define ARRAY_SIZE 11 //10 numbers then enter 
+#define MAX_INPUT_SIZE 1024  // Arbitrary large size for endless input
+
 // Function to read a character from UART
 char uart_getc() {
     return inbyte();
@@ -25,42 +26,40 @@ void uart_puts(const char* s) {
 int main() {
     init_platform();
 
-    char numbers[ARRAY_SIZE];
+    char numbers[MAX_INPUT_SIZE] = {0};
     char input;
     int count = 0;
 
-    uart_puts("Enter 10 single-digit numbers (0-9), then press Enter:\r\n");
+    uart_puts("Enter characters (including numbers or letters), press Enter after each batch to sort:\r\n");
 
-    while (count < ARRAY_SIZE - 1) {
+    while (1) {  // Loop to keep reading inputs and sorting
         input = uart_getc();
-        if (input >= '0' && input <= '9') {
-            numbers[count] = input;
-            count++;
-            uart_putc(input);  // Echo the input
-            uart_putc(' ');
-        } else if (input == '\r' && count == ARRAY_SIZE - 1) {
+        if (input == '\r') {
             uart_puts("\r\n");
-            break;  // Exit if Enter is pressed after 10 numbers
-        } else if (input == '\r') {
-            uart_puts("\r\nPlease enter all 10 numbers.\r\n");
+            if (count > 0) {
+                numbers[count] = '\0';  // Null-terminate the string
+
+                uart_puts("Original array: ");
+                uart_puts(numbers);
+                uart_puts("\r\n");
+
+                sort(numbers);
+
+                uart_puts("Sorted array: ");
+                uart_puts(numbers);
+                uart_puts("\r\n");
+                count = 0;  // Reset count for new input batch
+            } else {
+                uart_puts("No characters entered.\r\n");
+            }
+        } else {
+            if (count < MAX_INPUT_SIZE - 1) {
+                numbers[count] = input;
+                count++;
+                uart_putc(input);  // Echo the input
+            }
         }
-        // Ignore other inputs
     }
-    numbers[ARRAY_SIZE - 1] = '\0';  // Null-terminate the string
-
-    uart_puts("Original array: ");
-    uart_puts(numbers);
-    uart_puts("\r\n");
-
-    sort(numbers);
-
-    uart_puts("Sorted array: ");
-    uart_puts(numbers);
-    uart_puts("\r\n");
-
-    // New code to wait for input after sorting
-    uart_puts("Press any key to exit...\r\n");
-    uart_getc();  // Wait for a single character input
 
     cleanup_platform();
     return 0;
