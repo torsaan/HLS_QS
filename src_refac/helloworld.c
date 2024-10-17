@@ -4,7 +4,7 @@
 #include "xil_printf.h"
 #include "quicksort.h"
 
-#define MAX_INPUT_SIZE 1024  // Arbitrary large size for endless input
+#define MAX_INPUT_SIZE 1024  // "Endless"
 
 // Function to read a character from UART
 char uart_getc() {
