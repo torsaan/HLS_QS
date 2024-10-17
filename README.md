@@ -1,4 +1,5 @@
 #T0d0: Wrapper fil kan ikke brukes til å bygge platformen(?)
+   * Litt usikker på om dette går an å bare flytte på. uten alle filer. 
 
 #HLS_QS Embedded Application Guide
 
