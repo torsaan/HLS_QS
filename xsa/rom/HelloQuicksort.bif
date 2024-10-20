@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\HLS_3\HLSAPPQS\Quicksort\export\Quicksort\sw\boot\fsbl.elf
+	C:\HLS_3\HLSAPPQS\HelloQuicksort\_ide\bitstream\Zyob7_wrapper.bit
+	C:\HLS_3\HLSAPPQS\HelloQuicksort\build\HelloQuicksort.elf
+}
