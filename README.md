@@ -188,7 +188,7 @@ Click `Finish`
 ![image](https://github.com/user-attachments/assets/7fdaed3b-10d0-416d-8cfa-61bf8c3bbce7)
 
 
-1. Import and replace the `src` files with the quicksort algorithm files from the repository.
+1. Import and replace the `src` or `src_refac` (src might not work) files with the quicksort algorithm files from the repository.
 ![image](https://github.com/user-attachments/assets/c0bf33cd-aced-476f-a9bd-e1baa37982e2) 
 
 2. Copy the files from this repo under `src`and replace the files your local `src`folder. 
