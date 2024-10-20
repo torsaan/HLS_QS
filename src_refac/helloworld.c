@@ -4,7 +4,7 @@
 #include "xil_printf.h"
 #include "quicksort.h"
 
-#define MAX_INPUT_SIZE 1024  // "Endless"
+#define MAX_INPUT_SIZE 1024  // Arbitrary large size for endless input
 
 // Function to read a character from UART
 char uart_getc() {
@@ -30,7 +30,7 @@ int main() {
     char input;
     int count = 0;
 
-    uart_puts("Enter characters press Enter to sort:\r\n");
+    uart_puts("Enter characters (including numbers or letters), press Enter after each batch to sort:\r\n");
 
     while (1) {  // Loop to keep reading inputs and sorting
         input = uart_getc();
@@ -39,7 +39,7 @@ int main() {
             if (count > 0) {
                 numbers[count] = '\0';  // Null-terminate the string
 
-                uart_puts("Original array : ");
+                uart_puts("Original array: ");
                 uart_puts(numbers);
                 uart_puts("\r\n");
 
